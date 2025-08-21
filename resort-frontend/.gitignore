@@ -16,7 +16,6 @@
 
 # Environment Variables
 .env                     # Arquivo base de variáveis de ambiente
-!.env.example           # Não ignorar o arquivo de exemplo
 .env.local              # Configurações locais que sobrescrevem .env
 .env.development        # Configurações específicas para ambiente de desenvolvimento
 .env.development.local  # Configurações locais de desenvolvimento
