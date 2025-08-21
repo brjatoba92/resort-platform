@@ -1,0 +1,20 @@
+import Joi from "joi";
+export declare const loginSchema: Joi.ObjectSchema<any>;
+export declare const createUserSchema: Joi.ObjectSchema<any>;
+export declare const refreshTokenSchema: Joi.ObjectSchema<any>;
+export declare const createMinibarItemSchema: Joi.ObjectSchema<any>;
+export declare const updateMinibarItemSchema: Joi.ObjectSchema<any>;
+export declare const createMinibarConsumptionSchema: Joi.ObjectSchema<any>;
+export declare const createPaymentSchema: Joi.ObjectSchema<any>;
+export declare const updatePaymentSchema: Joi.ObjectSchema<any>;
+export declare const processPaymentSchema: Joi.ObjectSchema<any>;
+export declare const createNotificationSchema: Joi.ObjectSchema<any>;
+export declare const updateNotificationSchema: Joi.ObjectSchema<any>;
+export declare const sendNotificationSchema: Joi.ObjectSchema<any>;
+export declare const uploadFileSchema: Joi.ObjectSchema<any>;
+export declare const updateFileUploadSchema: Joi.ObjectSchema<any>;
+export declare const getFilesByEntitySchema: Joi.ObjectSchema<any>;
+export declare const generateReportSchema: Joi.ObjectSchema<any>;
+export declare const customReportSchema: Joi.ObjectSchema<any>;
+export declare const reportScheduleSchema: Joi.ObjectSchema<any>;
+//# sourceMappingURL=validators.d.ts.map

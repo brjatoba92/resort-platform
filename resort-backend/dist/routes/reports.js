@@ -1,0 +1,20 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const reportController_1 = require("@/controllers/reportController");
+const auth_1 = require("@/middleware/auth");
+const router = (0, express_1.Router)();
+router.post("/generate", auth_1.authenticate, reportController_1.ReportController.generateReport);
+router.get("/financial", auth_1.authenticate, reportController_1.ReportController.generateFinancialReport);
+router.get("/occupancy", auth_1.authenticate, reportController_1.ReportController.generateOccupancyReport);
+router.get("/minibar", auth_1.authenticate, reportController_1.ReportController.generateMinibarReport);
+router.get("/notifications", auth_1.authenticate, reportController_1.ReportController.generateNotificationReport);
+router.post("/custom", auth_1.authenticate, reportController_1.ReportController.generateCustomReport);
+router.get("/types/available", auth_1.authenticate, reportController_1.ReportController.getAvailableReportTypes);
+router.get("/formats/available", auth_1.authenticate, reportController_1.ReportController.getAvailableExportFormats);
+router.get("/stats/overview", auth_1.authenticate, reportController_1.ReportController.getReportStats);
+router.get("/quick/dashboard", auth_1.authenticate, reportController_1.ReportController.getQuickDashboardReport);
+router.get("/test/database", auth_1.authenticate, reportController_1.ReportController.testDatabase);
+router.post("/test/create-data", auth_1.authenticate, reportController_1.ReportController.createTestData);
+exports.default = router;
+//# sourceMappingURL=reports.js.map

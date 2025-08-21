@@ -1,0 +1,22 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const paymentController_1 = require("@/controllers/paymentController");
+const auth_1 = require("@/middleware/auth");
+const router = (0, express_1.Router)();
+router.get("/", auth_1.authenticate, paymentController_1.PaymentController.getAllPayments);
+router.get("/:id", auth_1.authenticate, paymentController_1.PaymentController.getPaymentById);
+router.post("/", auth_1.authenticate, paymentController_1.PaymentController.createPayment);
+router.put("/:id", auth_1.authenticate, paymentController_1.PaymentController.updatePayment);
+router.delete("/:id", auth_1.authenticate, paymentController_1.PaymentController.deletePayment);
+router.get("/reservation/:reservationId", auth_1.authenticate, paymentController_1.PaymentController.getPaymentsByReservation);
+router.get("/reservation/:reservationId/total", auth_1.authenticate, paymentController_1.PaymentController.getTotalPaidByReservation);
+router.get("/reservation/:reservationId/balance", auth_1.authenticate, paymentController_1.PaymentController.getPendingBalanceByReservation);
+router.post("/process", auth_1.authenticate, paymentController_1.PaymentController.processPayment);
+router.post("/:id/refund", auth_1.authenticate, paymentController_1.PaymentController.refundPayment);
+router.get("/stats/overview", auth_1.authenticate, paymentController_1.PaymentController.getPaymentStats);
+router.get("/stats/period", auth_1.authenticate, paymentController_1.PaymentController.getPaymentsByPeriod);
+router.get("/stats/method/:method", auth_1.authenticate, paymentController_1.PaymentController.getPaymentsByMethod);
+router.get("/methods/available", auth_1.authenticate, paymentController_1.PaymentController.getAvailablePaymentMethods);
+exports.default = router;
+//# sourceMappingURL=payments.js.map

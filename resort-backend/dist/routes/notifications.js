@@ -1,0 +1,27 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const notificationController_1 = require("@/controllers/notificationController");
+const auth_1 = require("@/middleware/auth");
+const router = (0, express_1.Router)();
+router.get("/", auth_1.authenticate, notificationController_1.NotificationController.getAllNotifications);
+router.get("/:id", auth_1.authenticate, notificationController_1.NotificationController.getNotificationById);
+router.post("/", auth_1.authenticate, notificationController_1.NotificationController.createNotification);
+router.put("/:id", auth_1.authenticate, notificationController_1.NotificationController.updateNotification);
+router.delete("/:id", auth_1.authenticate, notificationController_1.NotificationController.deleteNotification);
+router.get("/reservation/:reservationId", auth_1.authenticate, notificationController_1.NotificationController.getNotificationsByReservation);
+router.get("/type/:type", auth_1.authenticate, notificationController_1.NotificationController.getNotificationsByType);
+router.post("/send", auth_1.authenticate, notificationController_1.NotificationController.sendNotification);
+router.post("/checkout/1h/:reservationId", auth_1.authenticate, notificationController_1.NotificationController.createCheckoutReminder1h);
+router.post("/checkout/30min/:reservationId", auth_1.authenticate, notificationController_1.NotificationController.createCheckoutReminder30min);
+router.post("/checkin/:reservationId", auth_1.authenticate, notificationController_1.NotificationController.createCheckinReminder);
+router.post("/payment/:reservationId", auth_1.authenticate, notificationController_1.NotificationController.createPaymentReminder);
+router.post("/minibar/:reservationId", auth_1.authenticate, notificationController_1.NotificationController.createMinibarConsumptionNotification);
+router.post("/system/alert", auth_1.authenticate, notificationController_1.NotificationController.createSystemAlert);
+router.post("/process/pending", auth_1.authenticate, notificationController_1.NotificationController.processPendingNotifications);
+router.post("/process/automatic", auth_1.authenticate, notificationController_1.NotificationController.checkAndCreateAutomaticNotifications);
+router.get("/stats/overview", auth_1.authenticate, notificationController_1.NotificationController.getNotificationStats);
+router.get("/stats/period", auth_1.authenticate, notificationController_1.NotificationController.getNotificationsByPeriod);
+router.get("/types/available", auth_1.authenticate, notificationController_1.NotificationController.getAvailableNotificationTypes);
+exports.default = router;
+//# sourceMappingURL=notifications.js.map

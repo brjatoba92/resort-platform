@@ -1,0 +1,21 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const minibarController_1 = require("@/controllers/minibarController");
+const auth_1 = require("@/middleware/auth");
+const router = (0, express_1.Router)();
+router.get("/items", auth_1.authenticate, minibarController_1.MinibarController.getAllItems);
+router.get("/items/:id", auth_1.authenticate, minibarController_1.MinibarController.getItemById);
+router.post("/items", auth_1.authenticate, minibarController_1.MinibarController.createItem);
+router.put("/items/:id", auth_1.authenticate, minibarController_1.MinibarController.updateItem);
+router.delete("/items/:id", auth_1.authenticate, minibarController_1.MinibarController.deleteItem);
+router.get("/items/category/:category", auth_1.authenticate, minibarController_1.MinibarController.getItemsByCategory);
+router.get("/categories", auth_1.authenticate, minibarController_1.MinibarController.getCategories);
+router.post("/consumption", auth_1.authenticate, minibarController_1.MinibarController.recordConsumption);
+router.get("/consumption/reservation/:reservationId", auth_1.authenticate, minibarController_1.MinibarController.getConsumptionByReservation);
+router.get("/consumption/period", auth_1.authenticate, minibarController_1.MinibarController.getConsumptionByPeriod);
+router.get("/consumption/total/:reservationId", auth_1.authenticate, minibarController_1.MinibarController.getTotalConsumptionByReservation);
+router.get("/consumption/stats", auth_1.authenticate, minibarController_1.MinibarController.getConsumptionStats);
+router.get("/consumption/item/:itemId", auth_1.authenticate, minibarController_1.MinibarController.getConsumptionByItem);
+exports.default = router;
+//# sourceMappingURL=minibar.js.map
