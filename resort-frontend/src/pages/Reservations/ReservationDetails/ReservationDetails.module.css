@@ -1,0 +1,185 @@
+.container {
+  @apply space-y-6;
+}
+
+.header {
+  @apply flex items-center justify-between;
+}
+
+.backButton {
+  @apply flex items-center text-gray-600 hover:text-gray-900 transition-colors;
+}
+
+.backIcon {
+  @apply w-5 h-5 mr-2;
+}
+
+.title {
+  @apply text-2xl font-heading font-bold text-gray-900;
+}
+
+.content {
+  @apply grid grid-cols-1 lg:grid-cols-3 gap-6;
+}
+
+/* Card Principal */
+.mainCard {
+  @apply lg:col-span-2 bg-white rounded-lg shadow-soft overflow-hidden;
+}
+
+.reservationHeader {
+  @apply p-6 border-b border-gray-100;
+}
+
+.reservationInfo {
+  @apply flex justify-between items-start;
+}
+
+.reservationId {
+  @apply text-sm text-gray-500;
+}
+
+.status {
+  @apply inline-flex items-center px-3 py-1 rounded-full text-sm font-medium;
+}
+
+.statusPending {
+  @apply bg-yellow-100 text-yellow-800;
+}
+
+.statusConfirmed {
+  @apply bg-green-100 text-green-800;
+}
+
+.statusCheckedIn {
+  @apply bg-blue-100 text-blue-800;
+}
+
+.statusCheckedOut {
+  @apply bg-gray-100 text-gray-800;
+}
+
+.statusCanceled {
+  @apply bg-red-100 text-red-800;
+}
+
+/* Seções */
+.section {
+  @apply p-6 border-b border-gray-100 last:border-b-0;
+}
+
+.sectionTitle {
+  @apply text-lg font-medium text-gray-900 mb-4;
+}
+
+.infoGrid {
+  @apply grid grid-cols-1 md:grid-cols-2 gap-4;
+}
+
+.infoItem {
+  @apply space-y-1;
+}
+
+.infoLabel {
+  @apply text-sm text-gray-500;
+}
+
+.infoValue {
+  @apply text-sm text-gray-900;
+}
+
+/* Sidebar */
+.sidebar {
+  @apply lg:col-span-1 space-y-6;
+}
+
+/* Card de Ações */
+.actionCard {
+  @apply bg-white rounded-lg shadow-soft p-6;
+}
+
+.actionButton {
+  @apply w-full flex justify-center items-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white transition-colors;
+}
+
+.primaryButton {
+  @apply bg-primary-600 hover:bg-primary-700;
+}
+
+.secondaryButton {
+  @apply mt-2 bg-gray-600 hover:bg-gray-700;
+}
+
+.dangerButton {
+  @apply mt-2 bg-red-600 hover:bg-red-700;
+}
+
+/* Pagamento */
+.paymentInfo {
+  @apply mt-4 pt-4 border-t border-gray-100;
+}
+
+.paymentStatus {
+  @apply flex items-center justify-between text-sm;
+}
+
+.paymentDate {
+  @apply text-gray-500;
+}
+
+/* Histórico */
+.timeline {
+  @apply mt-4 space-y-4;
+}
+
+.timelineItem {
+  @apply relative pb-4 pl-6 border-l-2 border-gray-200 last:border-l-0;
+}
+
+.timelineDate {
+  @apply text-xs text-gray-500;
+}
+
+.timelineTitle {
+  @apply text-sm font-medium text-gray-900;
+}
+
+.timelineDescription {
+  @apply text-sm text-gray-600;
+}
+
+/* Resumo de Valores */
+.summary {
+  @apply space-y-2;
+}
+
+.summaryItem {
+  @apply flex justify-between text-sm;
+}
+
+.summaryLabel {
+  @apply text-gray-600;
+}
+
+.summaryValue {
+  @apply text-gray-900;
+}
+
+.summaryTotal {
+  @apply flex justify-between text-base font-medium pt-4 border-t border-gray-100 mt-4;
+}
+
+.totalLabel {
+  @apply text-gray-900;
+}
+
+.totalValue {
+  @apply text-primary-600;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .infoGrid {
+    @apply grid-cols-1;
+  }
+}

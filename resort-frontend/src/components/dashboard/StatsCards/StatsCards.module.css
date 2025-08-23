@@ -1,0 +1,107 @@
+.container {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6;
+}
+
+.card {
+  @apply bg-white rounded-lg shadow-md p-6 transition-all duration-300 hover:shadow-lg;
+}
+
+.cardHeader {
+  @apply flex justify-between items-start mb-4;
+}
+
+.iconWrapper {
+  @apply p-2 rounded-lg;
+}
+
+.icon {
+  @apply h-6 w-6;
+}
+
+.cardContent {
+  @apply space-y-2;
+}
+
+.title {
+  @apply text-sm font-medium text-gray-500;
+}
+
+.value {
+  @apply text-2xl font-bold text-gray-900;
+}
+
+.change {
+  @apply flex items-center text-sm font-medium;
+}
+
+.changeIcon {
+  @apply h-4 w-4 mr-1;
+}
+
+.increase {
+  @apply text-green-600;
+}
+
+.decrease {
+  @apply text-red-600;
+}
+
+/* Card variants */
+.cardGuests {
+  @apply hover:bg-blue-50;
+}
+
+.cardGuests .iconWrapper {
+  @apply bg-blue-100;
+}
+
+.cardGuests .icon {
+  @apply text-blue-600;
+}
+
+.cardRevenue {
+  @apply hover:bg-green-50;
+}
+
+.cardRevenue .iconWrapper {
+  @apply bg-green-100;
+}
+
+.cardRevenue .icon {
+  @apply text-green-600;
+}
+
+.cardRooms {
+  @apply hover:bg-purple-50;
+}
+
+.cardRooms .iconWrapper {
+  @apply bg-purple-100;
+}
+
+.cardRooms .icon {
+  @apply text-purple-600;
+}
+
+.cardBookings {
+  @apply hover:bg-orange-50;
+}
+
+.cardBookings .iconWrapper {
+  @apply bg-orange-100;
+}
+
+.cardBookings .icon {
+  @apply text-orange-600;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .container {
+    @apply grid-cols-1;
+  }
+
+  .value {
+    @apply text-xl;
+  }
+}

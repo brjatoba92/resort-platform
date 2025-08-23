@@ -1,0 +1,67 @@
+.hero {
+  @apply relative h-screen flex items-center justify-center text-white;
+  background: linear-gradient(135deg, #1a365d 0%, #2d3748 100%);
+}
+
+.overlay {
+  @apply absolute inset-0 bg-black bg-opacity-50;
+}
+
+.content {
+  @apply relative z-10 text-center max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.title {
+  @apply text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.subtitle {
+  @apply text-xl sm:text-2xl max-w-3xl mx-auto;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  margin-bottom: 2rem;
+}
+
+.cta {
+  @apply flex flex-col sm:flex-row gap-4 justify-center;
+  margin-top: 2rem;
+}
+
+.primaryButton {
+  @apply px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-primary-600 hover:bg-primary-700;
+  @apply transition-colors duration-200;
+}
+
+.secondaryButton {
+  @apply px-8 py-3 border border-transparent text-base font-medium rounded-md text-primary-600 bg-white hover:bg-gray-50;
+  @apply transition-colors duration-200;
+}
+
+@media (max-width: 640px) {
+  .hero {
+    @apply h-[calc(100vh-4rem)];
+  }
+
+  .content {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .title {
+    @apply text-3xl;
+    margin-bottom: 1rem;
+  }
+
+  .subtitle {
+    @apply text-lg;
+    margin-bottom: 2rem;
+  }
+
+  .cta {
+    @apply px-4;
+    margin-top: 2rem;
+  }
+}

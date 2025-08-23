@@ -1,0 +1,106 @@
+.dashboard {
+  @apply space-y-8;
+}
+
+.title {
+  @apply text-2xl font-heading font-bold text-gray-900;
+}
+
+.statsGrid {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6;
+}
+
+.statCard {
+  @apply bg-white rounded-xl shadow-soft p-6;
+}
+
+.statTitle {
+  @apply text-lg font-medium text-gray-900 mb-2;
+}
+
+.statValue {
+  @apply text-3xl font-bold;
+}
+
+.statDescription {
+  @apply text-sm text-gray-500 mt-1;
+}
+
+/* Cores específicas para cada tipo de estatística */
+.occupancyValue {
+  @apply text-primary-500;
+}
+
+.reservationsValue {
+  @apply text-secondary-500;
+}
+
+.revenueValue {
+  @apply text-resort-palm;
+}
+
+.weatherValue {
+  @apply text-resort-ocean;
+}
+
+/* Seção de Atividades Recentes */
+.activitiesSection {
+  @apply mt-8;
+}
+
+.activitiesTitle {
+  @apply text-xl font-heading font-semibold text-gray-900 mb-4;
+}
+
+.activitiesList {
+  @apply bg-white rounded-xl shadow-soft divide-y divide-gray-100;
+}
+
+.activityItem {
+  @apply px-6 py-4;
+}
+
+.activityHeader {
+  @apply flex items-center justify-between;
+}
+
+.activityTitle {
+  @apply text-sm font-medium text-gray-900;
+}
+
+.activityTime {
+  @apply text-xs text-gray-500;
+}
+
+.activityDescription {
+  @apply text-sm text-gray-600 mt-1;
+}
+
+/* Seção de Gráficos */
+.chartsSection {
+  @apply grid grid-cols-1 lg:grid-cols-2 gap-6 mt-8;
+}
+
+.chartCard {
+  @apply bg-white rounded-xl shadow-soft p-6;
+}
+
+.chartTitle {
+  @apply text-lg font-medium text-gray-900 mb-4;
+}
+
+/* Animações */
+.statCard {
+  @apply transform transition-all duration-300 hover:scale-105;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .statsGrid {
+    @apply grid-cols-1 md:grid-cols-2;
+  }
+
+  .chartsSection {
+    @apply grid-cols-1;
+  }
+}
