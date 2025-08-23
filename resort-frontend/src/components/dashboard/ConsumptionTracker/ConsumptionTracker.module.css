@@ -1,0 +1,68 @@
+.container {
+  @apply bg-white rounded-lg shadow-md p-6;
+}
+
+.title {
+  @apply text-xl font-semibold mb-6;
+}
+
+.tableWrapper {
+  @apply overflow-x-auto;
+}
+
+.table {
+  @apply min-w-full divide-y divide-gray-200;
+}
+
+.table thead {
+  @apply bg-gray-50;
+}
+
+.table th {
+  @apply px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider;
+}
+
+.table tbody {
+  @apply bg-white divide-y divide-gray-200;
+}
+
+.table td {
+  @apply px-6 py-4 whitespace-nowrap text-sm text-gray-900;
+}
+
+/* Status badges */
+.statusPending {
+  @apply inline-flex px-2 py-1 text-xs font-semibold rounded-full bg-yellow-100 text-yellow-800;
+}
+
+.statusCharged {
+  @apply inline-flex px-2 py-1 text-xs font-semibold rounded-full bg-blue-100 text-blue-800;
+}
+
+.statusPaid {
+  @apply inline-flex px-2 py-1 text-xs font-semibold rounded-full bg-green-100 text-green-800;
+}
+
+/* Summary section */
+.summary {
+  @apply mt-6 grid grid-cols-3 gap-4;
+}
+
+.summaryItem {
+  @apply bg-gray-50 p-4 rounded-lg;
+}
+
+.summaryLabel {
+  @apply block text-sm font-medium text-gray-500;
+}
+
+.summaryValue {
+  @apply block mt-1 text-lg font-semibold text-gray-900;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .summary {
+    @apply grid-cols-1;
+  }
+}

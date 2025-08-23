@@ -1,0 +1,64 @@
+.landing {
+  @apply min-h-screen bg-resort-sand;
+}
+
+/* Seção de Contato */
+.contact {
+  @apply py-24 bg-white;
+}
+
+.contactContent {
+  @apply container mx-auto px-4 max-w-2xl;
+}
+
+.contactTitle {
+  @apply text-3xl font-bold tracking-tight text-gray-900 text-center mb-4;
+}
+
+.contactSubtitle {
+  @apply text-xl text-gray-600 text-center mb-12;
+}
+
+.contactForm {
+  @apply space-y-6 bg-white rounded-2xl shadow-lg p-8;
+}
+
+.formGroup {
+  @apply space-y-2;
+}
+
+.label {
+  @apply block text-sm font-medium text-gray-700;
+}
+
+.input {
+  @apply block w-full rounded-lg border-gray-300 shadow-sm;
+  @apply focus:border-resort-ocean focus:ring-resort-ocean;
+}
+
+.textarea {
+  @apply block w-full rounded-lg border-gray-300 shadow-sm;
+  @apply focus:border-resort-ocean focus:ring-resort-ocean;
+  @apply resize-none;
+}
+
+.submitButton {
+  @apply w-full bg-resort-ocean text-white font-semibold px-8 py-4 rounded-lg;
+  @apply hover:bg-resort-ocean/90 transition-colors;
+  @apply transform transition-transform duration-200 hover:scale-105;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .contactTitle {
+    @apply text-2xl;
+  }
+
+  .contactSubtitle {
+    @apply text-lg;
+  }
+
+  .contactForm {
+    @apply p-6;
+  }
+}

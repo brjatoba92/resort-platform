@@ -1,0 +1,45 @@
+.header {
+  @apply fixed top-0 left-0 right-0 z-50 bg-white shadow-md;
+}
+
+.container {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  @apply flex items-center justify-between;
+  height: 4rem;
+}
+
+.logo {
+  @apply text-xl font-bold text-primary-600;
+  text-decoration: none;
+}
+
+.nav {
+  @apply flex items-center space-x-4;
+}
+
+.navLink {
+  @apply text-gray-600 hover:text-gray-900;
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+}
+
+.authButton {
+  @apply px-4 py-2 rounded-md text-sm font-medium;
+  @apply bg-primary-600 text-white hover:bg-primary-700;
+  text-decoration: none;
+  transition: background-color 0.2s ease-in-out;
+}
+
+@media (max-width: 640px) {
+  .nav {
+    @apply space-x-2;
+  }
+
+  .navLink {
+    @apply text-sm;
+  }
+
+  .authButton {
+    @apply px-3 py-1;
+  }
+}

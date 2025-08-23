@@ -1,0 +1,38 @@
+.container {
+  @apply max-w-4xl mx-auto p-6;
+}
+
+.header {
+  @apply mb-6;
+}
+
+.title {
+  @apply text-2xl font-heading font-bold text-gray-900;
+}
+
+.form {
+  @apply space-y-6;
+}
+
+.formGrid {
+  @apply grid grid-cols-1 md:grid-cols-2 gap-6;
+}
+
+.addressSection {
+  @apply border-t pt-6 mt-6;
+}
+
+.sectionTitle {
+  @apply text-xl font-semibold mb-4 text-gray-900;
+}
+
+.buttonGroup {
+  @apply flex justify-end space-x-4;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .formGrid {
+    @apply grid-cols-1;
+  }
+}

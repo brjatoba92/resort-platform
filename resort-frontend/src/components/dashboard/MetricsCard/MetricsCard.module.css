@@ -1,0 +1,55 @@
+.card {
+  @apply bg-white rounded-lg shadow-md p-6;
+}
+
+.content {
+  @apply flex items-center justify-between;
+}
+
+.info {
+  @apply flex flex-col;
+}
+
+.title {
+  @apply text-sm font-medium text-gray-600;
+}
+
+.value {
+  @apply mt-1 text-3xl font-semibold text-gray-900;
+}
+
+.description {
+  @apply mt-1 text-sm text-gray-500;
+}
+
+.icon {
+  @apply text-gray-400;
+}
+
+.trend {
+  @apply mt-4;
+}
+
+.trendValue {
+  @apply inline-flex items-center text-sm font-medium;
+}
+
+.trendPositive {
+  @apply text-green-600;
+}
+
+.trendNegative {
+  @apply text-red-600;
+}
+
+.trendIcon {
+  @apply self-center flex-shrink-0 h-5 w-5;
+}
+
+.trendIconPositive {
+  @apply text-green-500;
+}
+
+.trendIconNegative {
+  @apply text-red-500;
+}

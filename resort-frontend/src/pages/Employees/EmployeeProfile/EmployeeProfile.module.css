@@ -1,0 +1,138 @@
+.container {
+  @apply space-y-6;
+}
+
+.header {
+  @apply flex items-center justify-between;
+}
+
+.backButton {
+  @apply flex items-center text-gray-600 hover:text-gray-900 transition-colors;
+}
+
+.backIcon {
+  @apply w-5 h-5 mr-2;
+}
+
+.title {
+  @apply text-2xl font-heading font-bold text-gray-900;
+}
+
+.content {
+  @apply grid grid-cols-1 lg:grid-cols-3 gap-6;
+}
+
+/* Card de Informações Principais */
+.mainCard {
+  @apply lg:col-span-2 bg-white rounded-lg shadow-soft p-6;
+}
+
+.profileHeader {
+  @apply flex items-center space-x-4 mb-6;
+}
+
+.avatar {
+  @apply w-20 h-20 rounded-full bg-primary-100 flex items-center justify-center text-2xl font-medium text-primary-600;
+}
+
+.profileInfo {
+  @apply flex-1;
+}
+
+.name {
+  @apply text-xl font-medium text-gray-900;
+}
+
+.role {
+  @apply text-gray-500;
+}
+
+.status {
+  @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium;
+}
+
+.statusActive {
+  @apply bg-green-100 text-green-800;
+}
+
+.statusInactive {
+  @apply bg-red-100 text-red-800;
+}
+
+.statusVacation {
+  @apply bg-yellow-100 text-yellow-800;
+}
+
+/* Seções de Informações */
+.section {
+  @apply mt-6;
+}
+
+.sectionTitle {
+  @apply text-lg font-medium text-gray-900 mb-4;
+}
+
+.infoGrid {
+  @apply grid grid-cols-1 md:grid-cols-2 gap-4;
+}
+
+.infoItem {
+  @apply space-y-1;
+}
+
+.infoLabel {
+  @apply text-sm text-gray-500;
+}
+
+.infoValue {
+  @apply text-sm text-gray-900;
+}
+
+/* Card Lateral */
+.sideCard {
+  @apply lg:col-span-1 space-y-6;
+}
+
+.actionCard {
+  @apply bg-white rounded-lg shadow-soft p-6;
+}
+
+.actionButton {
+  @apply w-full flex justify-center items-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white transition-colors;
+}
+
+.editButton {
+  @apply bg-primary-600 hover:bg-primary-700;
+}
+
+.deactivateButton {
+  @apply bg-red-600 hover:bg-red-700;
+}
+
+/* Histórico */
+.timeline {
+  @apply space-y-4;
+}
+
+.timelineItem {
+  @apply relative pb-4 pl-6 border-l-2 border-gray-200 last:border-l-0;
+}
+
+.timelineDate {
+  @apply text-xs text-gray-500;
+}
+
+.timelineTitle {
+  @apply text-sm font-medium text-gray-900;
+}
+
+.timelineDescription {
+  @apply text-sm text-gray-600;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .infoGrid {
+    @apply grid-cols-1;
+  }
+}

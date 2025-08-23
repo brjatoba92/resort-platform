@@ -1,0 +1,1 @@
+export { OccupancyChart } from './OccupancyChart';
