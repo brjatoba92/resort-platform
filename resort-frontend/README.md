@@ -1,178 +1,46 @@
-# Resort Platform Frontend
+# Getting Started with Create React App
 
-Frontend da plataforma de gerenciamento de resort, desenvolvido com React, TypeScript e Tailwind CSS.
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## 🚀 Funcionalidades Implementadas
+## Available Scripts
 
-### 🔐 Autenticação e Autorização
-- Sistema de login e registro
-- Proteção de rotas
-- Gerenciamento de tokens JWT
-- Refresh token automático
+In the project directory, you can run:
 
-### 📱 Layout e Componentes
-- Layout responsivo com header e footer
-- Páginas com lazy loading
-- Componentes modulares com CSS Modules
-- Design system consistente
+### `npm start`
 
-#### Componentes da Landing Page
-- **Hero Section**: Banner principal com chamadas para ação
-- **Features Section**: Recursos do resort com ícones e animações
-- **Room Showcase**: Exibição dos tipos de quartos disponíveis
-- **Testimonials Section**: Depoimentos de hóspedes
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-### 🎣 Hooks Personalizados
-- `useAuth`: Gerenciamento de autenticação
-- `useApi`: Cliente HTTP com interceptors
-- `useWebSocket`: Conexão WebSocket com reconexão automática
-- `useEventNotifications`: Notificações em tempo real
-- `useRealTimeData`: Dados em tempo real
-- `useLocalStorage`: Persistência local
-- `useTheme`: Gerenciamento de tema
-- `useLanguage`: Internacionalização
-- `useNotification`: Sistema de notificações
-- `useReservations`: Gerenciamento de reservas
+The page will reload if you make edits.\
+You will also see any lint errors in the console.
 
-### 🔄 Serviços
-#### API Services
-- Autenticação
-- Dashboard
-- Funcionários
-- Hóspedes
-- Pagamentos
-- Reservas
-- Quartos
-- Previsão do tempo
+### `npm test`
 
-#### Storage Services
-- LocalStorage
-- SessionStorage
-- Gerenciamento de expiração
-- Tipagem forte
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-#### WebSocket Services
-- Conexão em tempo real
-- Sistema pub/sub
-- Reconexão automática
-- Heartbeat
-- Atualizações de quartos
+### `npm run build`
 
-### 🌍 Contextos
-- `AuthContext`: Contexto de autenticação
-- `NotificationContext`: Sistema de notificações
-- `ThemeContext`: Gerenciamento de tema
-- `LanguageContext`: Internacionalização
-- `AppProviders`: Composição de providers
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-### 📄 Páginas
-- Home (Landing)
-- Login
-- Registro
-- Dashboard
-- Quartos
-- Detalhes do Quarto
-- Reservas
-- Nova Reserva
-- Serviços
-- Contato
-- 404
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-## 🛠️ Tecnologias Utilizadas
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-- React
-- TypeScript
-- Tailwind CSS
-- React Router DOM
-- Axios
-- React Icons
-- CSS Modules
+### `npm run eject`
 
-## 📦 Estrutura de Diretórios
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-```
-src/
-├── components/
-│   ├── landing/
-│   │   ├── FeaturesSection/
-│   │   ├── HeroSection/
-│   │   ├── RoomShowcase/
-│   │   └── TestimonialsSection/
-│   └── layout/
-│       ├── Footer/
-│       ├── Header/
-│       └── Layout/
-├── context/
-│   ├── AuthContext.tsx
-│   ├── NotificationContext.tsx
-│   ├── ThemeContext.tsx
-│   ├── LanguageContext.tsx
-│   └── AppProviders.tsx
-├── hooks/
-│   ├── useAuth.ts
-│   ├── useApi.ts
-│   ├── useWebSocket.ts
-│   ├── useEventNotifications.ts
-│   ├── useRealTimeData.ts
-│   ├── useLocalStorage.ts
-│   ├── useTheme.ts
-│   ├── useLanguage.ts
-│   ├── useNotification.ts
-│   └── useReservations.ts
-├── pages/
-│   ├── Home/
-│   ├── Login/
-│   ├── Register/
-│   ├── Dashboard/
-│   ├── Rooms/
-│   ├── RoomDetails/
-│   ├── Reservations/
-│   ├── NewReservation/
-│   ├── Services/
-│   ├── Contact/
-│   └── NotFound/
-├── services/
-│   ├── api/
-│   ├── storage/
-│   └── websocket/
-└── types/
-```
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-## 🚀 Como Executar
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-1. Instale as dependências:
-```bash
-npm install
-```
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-2. Execute o projeto:
-```bash
-npm start
-```
+## Learn More
 
-O projeto estará disponível em `http://localhost:3000`
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-## 📝 Notas de Desenvolvimento
-
-- Utilização de CSS Modules para evitar conflitos de estilo
-- Implementação de lazy loading para melhor performance
-- Sistema de rotas protegidas
-- Gerenciamento de estado com Context API
-- Tipagem forte com TypeScript
-- Design responsivo e mobile-first
-- Componentização para reusabilidade
-- Integração com WebSocket para dados em tempo real
-- Sistema robusto de autenticação e autorização
-
-## 🔜 Próximos Passos
-
-- [ ] Implementar testes unitários
-- [ ] Adicionar Storybook para documentação de componentes
-- [ ] Melhorar acessibilidade
-- [ ] Implementar PWA
-- [ ] Adicionar animações com Framer Motion
-- [ ] Implementar sistema de busca
-- [ ] Adicionar filtros avançados
-- [ ] Implementar sistema de reviews
-- [ ] Adicionar suporte a múltiplos idiomas
-- [ ] Implementar modo offline
+To learn React, check out the [React documentation](https://reactjs.org/).

@@ -1,1 +1,0 @@
-export { GuestRegistration } from './GuestRegistration';
