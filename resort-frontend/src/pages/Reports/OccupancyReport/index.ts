@@ -1,0 +1,1 @@
+export { OccupancyReport } from './OccupancyReport';

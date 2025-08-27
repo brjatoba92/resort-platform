@@ -1,0 +1,103 @@
+.container {
+  background-color: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+  font-size: 1.25rem;
+  color: #2c3e50;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  background-color: #f8fafc;
+  border-radius: 6px;
+  padding: 1rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.header h3 {
+  font-size: 1rem;
+  color: #2c3e50;
+  margin: 0;
+}
+
+.status {
+  font-size: 0.875rem;
+  font-weight: 500;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+}
+
+.high {
+  color: #dc3545;
+  background-color: #fdf2f2;
+}
+
+.medium {
+  color: #ffc107;
+  background-color: #fff8e6;
+}
+
+.low {
+  color: #34c759;
+  background-color: #f0fdf4;
+}
+
+.progressContainer {
+  height: 8px;
+  background-color: #e2e8f0;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 0.75rem;
+}
+
+.progressBar {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}
+
+.highBar {
+  background-color: #dc3545;
+}
+
+.mediumBar {
+  background-color: #ffc107;
+}
+
+.lowBar {
+  background-color: #34c759;
+}
+
+.details {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.875rem;
+  color: #64748b;
+}
+
+@media (max-width: 640px) {
+  .container {
+    padding: 1rem;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

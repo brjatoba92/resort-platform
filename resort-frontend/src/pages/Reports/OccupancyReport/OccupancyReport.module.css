@@ -1,0 +1,353 @@
+.occupancyReport {
+  padding: 2rem;
+  min-height: 100%;
+  background-color: #f8fafc;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.header h1 {
+  font-size: 2rem;
+  color: #2c3e50;
+  margin: 0;
+}
+
+.dateFilters {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.dateInput {
+  padding: 0.75rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.375rem;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+  width: 150px;
+}
+
+.dateInput:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.1);
+}
+
+.dateFilters span {
+  color: #64748b;
+}
+
+.summary {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.summaryCard {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.summaryCard h3 {
+  font-size: 1rem;
+  color: #64748b;
+  margin: 0 0 1rem;
+}
+
+.rate {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #2c3e50;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.details {
+  font-size: 0.875rem;
+  color: #64748b;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 2rem;
+}
+
+.mainSection {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+}
+
+.card h2 {
+  font-size: 1.25rem;
+  color: #2c3e50;
+  margin: 0 0 1.5rem;
+}
+
+.table {
+  overflow-x: auto;
+}
+
+.table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th,
+.table td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.table th {
+  background-color: #f8fafc;
+  font-weight: 600;
+  color: #2c3e50;
+  font-size: 0.875rem;
+}
+
+.table tr:hover {
+  background-color: #f8fafc;
+}
+
+.occupancyRate {
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.high {
+  background-color: #f0fdf4;
+  color: #34c759;
+}
+
+.medium {
+  background-color: #fff8e6;
+  color: #ffc107;
+}
+
+.low {
+  background-color: #fdf2f2;
+  color: #dc3545;
+}
+
+.roomTypes {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.roomType {
+  padding: 1rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 4px;
+}
+
+.roomTypeHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.roomTypeHeader h4 {
+  font-size: 1rem;
+  color: #2c3e50;
+  margin: 0;
+}
+
+.roomTypeDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.roomTypeInfo {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.875rem;
+}
+
+.roomTypeInfo span:first-child {
+  color: #64748b;
+}
+
+.roomTypeInfo span:last-child {
+  color: #2c3e50;
+  font-weight: 500;
+}
+
+.occupancyBar {
+  height: 8px;
+  background-color: #f1f5f9;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.bar {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}
+
+.forecast {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.forecastDay {
+  padding: 1rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 4px;
+}
+
+.forecastHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.forecastHeader h4 {
+  font-size: 1rem;
+  color: #2c3e50;
+  margin: 0;
+}
+
+.forecastDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.forecastInfo {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.875rem;
+}
+
+.forecastInfo span:first-child {
+  color: #64748b;
+}
+
+.forecastInfo span:last-child {
+  color: #2c3e50;
+  font-weight: 500;
+}
+
+.forecastBars {
+  position: relative;
+  height: 8px;
+}
+
+.barContainer {
+  position: relative;
+  height: 100%;
+  background-color: #f1f5f9;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.confirmedBar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: #34c759;
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}
+
+.predictedBar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: rgba(52, 199, 89, 0.3);
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}
+
+@media (max-width: 1024px) {
+  .content {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .occupancyReport {
+    padding: 1.5rem;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .header h1 {
+    font-size: 1.75rem;
+  }
+
+  .dateFilters {
+    width: 100%;
+  }
+
+  .dateInput {
+    flex: 1;
+  }
+
+  .table {
+    margin: 0 -1.5rem;
+  }
+
+  .table table {
+    min-width: 800px;
+  }
+}
+
+@media (max-width: 480px) {
+  .occupancyReport {
+    padding: 1rem;
+  }
+
+  .card {
+    padding: 1rem;
+  }
+
+  .sidebar {
+    grid-template-columns: 1fr;
+  }
+
+  .summary {
+    grid-template-columns: 1fr;
+  }
+}
