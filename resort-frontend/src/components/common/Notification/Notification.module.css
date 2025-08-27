@@ -1,0 +1,175 @@
+.notification {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  padding: 1rem;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  margin-bottom: 1rem;
+  overflow: hidden;
+  animation: slideIn 0.3s ease-out;
+  max-width: 400px;
+  width: 100%;
+}
+
+.notification.leave {
+  animation: slideOut 0.3s ease-in forwards;
+}
+
+/* Notification types */
+.success {
+  background-color: #ebf9f1;
+  border-left: 4px solid #34c759;
+}
+
+.error {
+  background-color: #fdf2f2;
+  border-left: 4px solid #dc3545;
+}
+
+.warning {
+  background-color: #fff8f0;
+  border-left: 4px solid #ffc107;
+}
+
+.info {
+  background-color: #f0f7ff;
+  border-left: 4px solid #3498db;
+}
+
+/* Icon styles */
+.icon {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin-right: 12px;
+  font-size: 14px;
+}
+
+.success .icon {
+  color: #34c759;
+  background-color: #d1f3e0;
+}
+
+.error .icon {
+  color: #dc3545;
+  background-color: #fbd7d7;
+}
+
+.warning .icon {
+  color: #ffc107;
+  background-color: #fff3d6;
+}
+
+.info .icon {
+  color: #3498db;
+  background-color: #d6ebff;
+}
+
+/* Content styles */
+.content {
+  flex: 1;
+  margin-right: 12px;
+}
+
+.title {
+  margin: 0 0 0.25rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.message {
+  margin: 0;
+  font-size: 0.875rem;
+  color: #4a5568;
+  line-height: 1.5;
+}
+
+/* Close button */
+.closeButton {
+  background: none;
+  border: none;
+  padding: 4px;
+  font-size: 1.25rem;
+  line-height: 1;
+  color: #a0aec0;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.2s ease;
+}
+
+.closeButton:hover {
+  opacity: 1;
+}
+
+/* Progress bar */
+.progressBar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  background-color: rgba(0, 0, 0, 0.1);
+  animation: progress linear forwards;
+  width: 100%;
+}
+
+.success .progressBar {
+  background-color: #34c759;
+}
+
+.error .progressBar {
+  background-color: #dc3545;
+}
+
+.warning .progressBar {
+  background-color: #ffc107;
+}
+
+.info .progressBar {
+  background-color: #3498db;
+}
+
+/* Animations */
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideOut {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+@keyframes progress {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 0;
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  .notification {
+    margin: 0.5rem;
+    max-width: calc(100% - 1rem);
+  }
+}

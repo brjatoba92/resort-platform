@@ -1,0 +1,239 @@
+.guestsList {
+  padding: 2rem;
+  min-height: 100%;
+  background-color: #f8fafc;
+}
+
+.header {
+  margin-bottom: 2rem;
+}
+
+.title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.title h1 {
+  font-size: 2rem;
+  color: #2c3e50;
+  margin: 0;
+}
+
+.filters {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.searchInput,
+.statusFilter {
+  padding: 0.75rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.375rem;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+}
+
+.searchInput {
+  flex: 1;
+  min-width: 250px;
+}
+
+.statusFilter {
+  width: 150px;
+  background-color: white;
+  cursor: pointer;
+}
+
+.searchInput:focus,
+.statusFilter:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.1);
+}
+
+.table {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th,
+.table td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.table th {
+  background-color: #f8fafc;
+  font-weight: 600;
+  color: #2c3e50;
+  font-size: 0.875rem;
+}
+
+.table tr:hover {
+  background-color: #f8fafc;
+}
+
+.guest {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.guestName {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.guestName span:first-child {
+  color: #2c3e50;
+  font-weight: 500;
+}
+
+.guestId {
+  font-size: 0.75rem;
+  color: #64748b;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.email,
+.phone {
+  font-size: 0.875rem;
+  color: #64748b;
+}
+
+.status {
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.statusActive {
+  background-color: #f0fdf4;
+  color: #34c759;
+}
+
+.statusInactive {
+  background-color: #f8fafc;
+  color: #64748b;
+}
+
+.statusBlacklisted {
+  background-color: #fdf2f2;
+  color: #dc3545;
+}
+
+.vipStatus {
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.vipPlatinum {
+  background-color: #f0f7ff;
+  color: #3498db;
+}
+
+.vipGold {
+  background-color: #fff8e6;
+  color: #ffc107;
+}
+
+.vipSilver {
+  background-color: #f8fafc;
+  color: #64748b;
+}
+
+.vipRegular {
+  background-color: #f8fafc;
+  color: #64748b;
+}
+
+.amount {
+  font-weight: 500;
+  color: #2c3e50;
+}
+
+.viewButton {
+  background: none;
+  border: none;
+  color: #3498db;
+  font-size: 0.875rem;
+  cursor: pointer;
+  padding: 0;
+}
+
+.viewButton:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 1200px) {
+  .filters {
+    flex-wrap: wrap;
+  }
+
+  .searchInput {
+    width: 100%;
+    min-width: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .guestsList {
+    padding: 1.5rem;
+  }
+
+  .title {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .title h1 {
+    font-size: 1.75rem;
+  }
+
+  .filters {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .searchInput,
+  .statusFilter {
+    width: 100%;
+  }
+
+  .table {
+    overflow-x: auto;
+  }
+
+  .table table {
+    min-width: 800px;
+  }
+}
+
+@media (max-width: 480px) {
+  .guestsList {
+    padding: 1rem;
+  }
+}

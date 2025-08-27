@@ -1,0 +1,290 @@
+.roomDetails {
+  padding: 2rem;
+  min-height: 100%;
+  background-color: #f8fafc;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.title h1 {
+  font-size: 2rem;
+  color: #2c3e50;
+  margin: 0;
+}
+
+.backButton {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #64748b;
+  cursor: pointer;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s ease;
+}
+
+.backButton:hover {
+  color: #2c3e50;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 2rem;
+}
+
+.mainInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+}
+
+.card h2 {
+  font-size: 1.25rem;
+  color: #2c3e50;
+  margin: 0 0 1.5rem;
+}
+
+.info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.infoItem {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.infoItem span:first-child {
+  font-size: 0.875rem;
+  color: #64748b;
+}
+
+.infoItem span:last-child {
+  font-size: 1rem;
+  color: #2c3e50;
+  font-weight: 500;
+}
+
+.description h3,
+.amenities h3 {
+  font-size: 1rem;
+  color: #2c3e50;
+  margin: 0 0 1rem;
+}
+
+.description p {
+  color: #64748b;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.amenitiesList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.amenity {
+  background-color: #f8fafc;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  color: #64748b;
+}
+
+.bookings {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.booking {
+  padding: 1rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 4px;
+}
+
+.bookingHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.bookingHeader h4 {
+  font-size: 1rem;
+  color: #2c3e50;
+  margin: 0;
+}
+
+.bookingDates {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  font-size: 0.875rem;
+  color: #64748b;
+}
+
+.status {
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.statusCompleted {
+  background-color: #f0fdf4;
+  color: #34c759;
+}
+
+.statusPending {
+  background-color: #fff8e6;
+  color: #ffc107;
+}
+
+.statusInProgress {
+  background-color: #f0f7ff;
+  color: #3498db;
+}
+
+.statusConfirmed {
+  background-color: #f0fdf4;
+  color: #34c759;
+}
+
+.statusCheckedIn {
+  background-color: #f0f7ff;
+  color: #3498db;
+}
+
+.statusCheckedOut {
+  background-color: #f8fafc;
+  color: #64748b;
+}
+
+.statusCancelled {
+  background-color: #fdf2f2;
+  color: #dc3545;
+}
+
+.logs {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.log {
+  padding: 1rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 4px;
+}
+
+.logHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.logDate {
+  font-size: 0.875rem;
+  color: #64748b;
+}
+
+.log h4 {
+  font-size: 1rem;
+  color: #2c3e50;
+  margin: 0 0 0.5rem;
+}
+
+.log p {
+  font-size: 0.875rem;
+  color: #64748b;
+  margin: 0 0 0.5rem;
+  line-height: 1.6;
+}
+
+.technician,
+.staff {
+  font-size: 0.875rem;
+  color: #64748b;
+  font-style: italic;
+}
+
+.cleaningType {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #3498db;
+  text-transform: capitalize;
+}
+
+@media (max-width: 1024px) {
+  .content {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .roomDetails {
+    padding: 1.5rem;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .title h1 {
+    font-size: 1.75rem;
+  }
+
+  .info {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .roomDetails {
+    padding: 1rem;
+  }
+
+  .card {
+    padding: 1rem;
+  }
+
+  .sidebar {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,211 @@
+.roomsList {
+  padding: 2rem;
+  min-height: 100%;
+  background-color: #f8fafc;
+}
+
+.header {
+  margin-bottom: 2rem;
+}
+
+.title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.title h1 {
+  font-size: 2rem;
+  color: #2c3e50;
+  margin: 0;
+}
+
+.filters {
+  display: flex;
+  gap: 1rem;
+}
+
+.searchInput,
+.statusFilter {
+  padding: 0.75rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.375rem;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+}
+
+.searchInput {
+  flex: 1;
+  min-width: 250px;
+}
+
+.statusFilter {
+  width: 150px;
+  background-color: white;
+  cursor: pointer;
+}
+
+.searchInput:focus,
+.statusFilter:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.1);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.roomCard {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.roomCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.roomHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.roomHeader h3 {
+  font-size: 1.25rem;
+  color: #2c3e50;
+  margin: 0;
+}
+
+.status {
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.statusAvailable {
+  background-color: #f0fdf4;
+  color: #34c759;
+}
+
+.statusOccupied {
+  background-color: #fff8e6;
+  color: #ffc107;
+}
+
+.statusMaintenance {
+  background-color: #fdf2f2;
+  color: #dc3545;
+}
+
+.statusCleaning {
+  background-color: #f0f7ff;
+  color: #3498db;
+}
+
+.roomInfo {
+  margin-bottom: 1rem;
+}
+
+.type {
+  color: #64748b;
+  font-size: 0.875rem;
+  margin: 0 0 0.5rem;
+}
+
+.price {
+  color: #3498db;
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.amenities {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.amenity {
+  background-color: #f8fafc;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  color: #64748b;
+}
+
+.maintenance {
+  border-top: 1px solid #e2e8f0;
+  padding-top: 1rem;
+}
+
+.maintenanceItem {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.875rem;
+  margin-bottom: 0.5rem;
+}
+
+.maintenanceItem span:first-child {
+  color: #64748b;
+}
+
+.maintenanceGood {
+  color: #34c759;
+}
+
+.maintenanceWarning {
+  color: #ffc107;
+}
+
+.maintenanceDanger {
+  color: #dc3545;
+}
+
+@media (max-width: 768px) {
+  .roomsList {
+    padding: 1.5rem;
+  }
+
+  .title {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .title h1 {
+    font-size: 1.75rem;
+  }
+
+  .filters {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .searchInput,
+  .statusFilter {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .roomsList {
+    padding: 1rem;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

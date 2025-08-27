@@ -1,0 +1,46 @@
+.layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  flex: 1;
+  margin-left: 0;
+  padding: 2rem;
+  transition: margin-left 0.3s ease-in-out;
+  position: relative;
+}
+
+.main.withSidebar {
+  margin-left: 250px;
+}
+
+.content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.toggleButton {
+  position: fixed;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 1rem 0.5rem;
+  cursor: pointer;
+  border-radius: 0 4px 4px 0;
+  transition: background-color 0.2s ease;
+  z-index: 100;
+}
+
+.toggleButton:hover {
+  background-color: #2980b9;
+}
+
+.withSidebar .toggleButton {
+  left: 250px;
+}
