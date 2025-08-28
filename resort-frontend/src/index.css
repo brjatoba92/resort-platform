@@ -1,3 +1,9 @@
+/* Importando estilos globais */
+@import './assets/styles/variables.css';
+@import './assets/styles/globals.css';
+@import './assets/styles/components.css';
+@import './assets/styles/utilities.css';
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
